@@ -8,6 +8,18 @@
 	<bean id="hello" class="com.tibame.domain.TWHello"></bean>
 	
 	<!-- deploy TibameHello 元件規範 -->
-	<bean id="tibamehello" class="com.tibame.domain.TibameHello"></bean>
+	<bean id="tibamehello" class="com.tibame.domain.TibameHello">
+		<!-- constructor injection  -->
+		<constructor-arg index="0">
+			<value>TSMC</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="tibamehello2" class="com.tibame.domain.TibameHello">
+		<!-- property injection like setter -->
+		<property name="companyName">
+			<value>Garmin</value>
+		</property>
+	</bean>
 	
 </beans>
