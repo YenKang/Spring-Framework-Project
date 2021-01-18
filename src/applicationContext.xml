@@ -22,8 +22,29 @@
 		</property>
 	</bean>
 	
-	<!-- 空參數 -->
+	<!-- 空參數建構子 -->
 	<bean id="tibamehello3" class="com.tibame.domain.TibameHello" init-method="init">
+	</bean>
+	
+	<!-- 注入控制反轉 -->
+	<bean id="emp1" class="com.tibame.domain.Employee">
+		<constructor-arg index="0">
+			<value>001</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>Bryan</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="boss" class="com.tibame.domain.Boss">
+		<property name="bossName">
+			<value>Steve Jobs</value>
+		</property>
+	</bean>
+	
+	<bean id="com" class="com.tibame.domain.Company">
+		<!-- 依存注入 -->
+		<property name="boss" ref="boss"/>
 	</bean>
 	
 </beans>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.tibame.domain.Company;
 import com.tibame.domain.ITibameHello;
 import com.tibame.domain.TibameHello;
 
@@ -27,6 +28,12 @@ public class TibameHelloServlet extends HttpServlet {
 		ITibameHello hello = factory.getBean("tibamehello3", ITibameHello.class);
 		String msg = hello.helloWorld("Tom");
 		response.getWriter().println(msg); // UI display
+		
+		Company com = factory.getBean("com", Company.class);
+		String bossName = com.getBoss().getBossName();
+		response.getWriter().println(bossName); // UI display
+
+		
 		
 	}
 

@@ -14,7 +14,7 @@ public class TibameHello implements ITibameHello {
 	
 	// 自訂建構子（空參數）
 	public TibameHello(){
-		System.out.println("constructor");
+		
 	}
 	
 	// 自訂建構子overloading
@@ -26,15 +26,13 @@ public class TibameHello implements ITibameHello {
 	@Override
 	public String helloWorld(String who) {
 		// TODO Auto-generated method stub
-		return String.format("company:%s Say hi to %s", companyName, who);
+		return String.format("Company:%s said hi to %s", companyName, who);
 	}
 	
 	// initialization method
 	public void init(){
 		// initialize companyName
 		this.companyName = "MTK";
-		System.out.println("attribute");
-		
 	}
 	
 	
