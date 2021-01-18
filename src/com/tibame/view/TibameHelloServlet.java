@@ -24,7 +24,7 @@ public class TibameHelloServlet extends HttpServlet {
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//ITibameHello hello = new TibameHello();
-		ITibameHello hello = factory.getBean("tibamehello2", ITibameHello.class);
+		ITibameHello hello = factory.getBean("tibamehello3", ITibameHello.class);
 		String msg = hello.helloWorld("Tom");
 		response.getWriter().println(msg); // UI display
 		

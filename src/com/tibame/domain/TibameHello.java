@@ -2,7 +2,7 @@ package com.tibame.domain;
 
 public class TibameHello implements ITibameHello {
 	//Attribute
-	private String companyName="Tibame";
+	private String companyName;
 	
 	public String getCompanyName() {
 		return companyName;
@@ -13,7 +13,9 @@ public class TibameHello implements ITibameHello {
 	}
 	
 	// 自訂建構子（空參數）
-	public TibameHello(){}
+	public TibameHello(){
+		System.out.println("constructor");
+	}
 	
 	// 自訂建構子overloading
 	public TibameHello(String companyName){
@@ -26,5 +28,14 @@ public class TibameHello implements ITibameHello {
 		// TODO Auto-generated method stub
 		return String.format("company:%s Say hi to %s", companyName, who);
 	}
+	
+	// initialization method
+	public void init(){
+		// initialize companyName
+		this.companyName = "MTK";
+		System.out.println("attribute");
+		
+	}
+	
 	
 }

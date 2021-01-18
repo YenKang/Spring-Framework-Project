@@ -22,4 +22,8 @@
 		</property>
 	</bean>
 	
+	<!-- 空參數 -->
+	<bean id="tibamehello3" class="com.tibame.domain.TibameHello" init-method="init">
+	</bean>
+	
 </beans>
