@@ -8,5 +8,6 @@
 	<bean id="hello" class="com.tibame.domain.TWHello"></bean>
 	
 	<!-- deploy TibameHello 元件規範 -->
+	<bean id="tibamehello" class="com.tibame.domain.TibameHello"></bean>
 	
 </beans>
