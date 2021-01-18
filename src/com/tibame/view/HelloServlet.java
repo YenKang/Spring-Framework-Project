@@ -11,6 +11,7 @@ import org.apache.catalina.core.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.tibame.domain.Hello;
+import com.tibame.domain.TWHello;
 import com.tibame.domain.iHello;
 
 /**
@@ -37,7 +38,7 @@ public class HelloServlet extends HttpServlet {
 		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// 2.new an object of sayHello (多型化架構)
-		iHello hello = factory.getBean("hello", Hello.class);
+		iHello hello = factory.getBean("hello", TWHello.class);
 		String msg = hello.helloWorld();
 		response.getWriter().println(msg);
 	}

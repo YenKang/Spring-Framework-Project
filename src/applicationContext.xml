@@ -5,6 +5,8 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 	<!-- 部署一個sayHello的bean -->
-	<bean id="hello" class="com.tibame.domain.Hello"></bean>
+	<bean id="hello" class="com.tibame.domain.TWHello"></bean>
+	
+	<!-- deploy TibameHello 元件規範 -->
 	
 </beans>
